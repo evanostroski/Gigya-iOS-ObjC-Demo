@@ -115,7 +115,8 @@
 
 - (IBAction)showScreenSet:(id)sender {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    [params setObject:@"DefaultMobile-RegistrationLogin" forKey:@"screenSet"];
+    [params setObject:@"Default-RegistrationLogin" forKey:@"screenSet"];
+    [params setObject:@"gigya-register-screen" forKey:@"startScreen"];
     [Gigya showPluginDialogOver:self plugin:@"accounts.screenSet" parameters:params completionHandler:^(BOOL closedByUser, NSError *error) {
             if (!error) {
             // Login was successful
